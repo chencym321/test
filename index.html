@@ -118,9 +118,11 @@
     .expand-btn {
       display: none;
     }
+    #score-display {
+      display: none;
+    }
 
     @media (min-width: 851px) {
-      
 
 
       #stats-details {
@@ -160,7 +162,9 @@
       display: none;
     }
    @media (max-width: 850px) {
-
+     #score-display {
+      display: block;
+    } 
       .file-ops {
         display: flex !important;
         flex-direction: column !important;
@@ -399,13 +403,7 @@
 
       /* 2. Make buttons bigger and easier to tap */
       .btn-nav {
-        flex: 1 !important; /* Buttons grow to fill space */
-        height: 46px !important; /* Larger tap target */
-        font-size: 1rem !important;
-        margin: 0 4px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        height: 30px !important; 
       }
 
       /* 3. Style the page selector for mobile */
@@ -591,9 +589,8 @@
       <!-- Sidebar for Progress/Score -->
       <div class="sidebar-stats">
           <div id="stats">
-            <div class="stats-header">
+            <div class="stats-header" id="progress-score-row">
               <div>
-                <div class="sub-metric">Current Score</div>
                 <div class="main-metric" id="score-display">0%</div>
               </div>
               <div style="text-align: right;">
@@ -17581,7 +17578,8 @@ function updateUI() {
   const scorePercent = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
   document.getElementById('progress-display').innerText = `Completed: ${answeredCount} / ${questions.length}`;
          // Move completed and score side by side
-         const progressScoreHtml = `<span id="progress-display">Completed: ${answeredCount} / ${questions.length}</span><span style="margin-left:22px;" class="score-pill" id="score-display">Score: ${scorePercent}%</span>`;
+         const progressScoreHtml = `<div style="text-align: right;"><div class="sub-metric">Questions Done</div><div style="font-weight: 700;" id="progress-display">${answeredCount} / ${questions.length}</div></div><div><div class="main-metric" id="score-display">${scorePercent}%</div></div>`;
+        //  const progressScoreHtml = `<span id="progress-display">Completed: ${answeredCount} / ${questions.length}</span><span style="margin-left:22px;" class="score-pill" id="score-display">Score: ${scorePercent}%</span>`
          const statsDiv = document.getElementById('stats');
          const progressScoreDiv = statsDiv.querySelector('#progress-score-row');
          if (progressScoreDiv) {
@@ -17817,4 +17815,3 @@ document.addEventListener('click', function(e) {
 
 </body>
 </html>
- 
