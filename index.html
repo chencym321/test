@@ -945,7 +945,7 @@ const practiceQuestions = [
       "C": "A Warehouse can be configured to suspend after a period of inactivity",
       "D": "A Warehouse can be configured to auto-resume when new queries are submitted"
     },
-    "ans": "AB",
+    "ans": "ABCD",
     "domain": "Performance and Cost Optimization Concepts"
   },
   {
@@ -993,7 +993,7 @@ const practiceQuestions = [
       "C": "Previously loaded files will be ignored",
       "D": "All of the above"
     },
-    "ans": "A",
+    "ans": "C",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -1062,7 +1062,7 @@ const practiceQuestions = [
   },
   {
     "id": 37,
-    "q": "Which of the following statements are true of Snowflake data loading? (Choose three.) values are not the same as SQL NULL values Most Voted",
+    "q": "Which of the following statements are true of Snowflake data loading? (Choose three.)",
     "options": {
       "A": "VARIANT ג€nullג€ values are not the same as SQL NULL values",
       "B": "It is recommended to do frequent, single row DMLs",
@@ -1534,7 +1534,7 @@ const practiceQuestions = [
       "C": "The Snowflake Web Interface (UI) data loading wizard",
       "D": "Bulk copy from an Internal Stage"
     },
-    "ans": "ABC",
+    "ans": "ABCD",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -1577,8 +1577,8 @@ const practiceQuestions = [
     "options": {
       "A": "The VALIDATION_MODE option is used when creating an Internal Stage",
       "B": "VALIDATION_MODE=RETURN_ALL_ERRORS is a parameter of the COPY command",
-      "C": "The VALIDATION_MODE option will validate data to be loaded by the COPY statement while completing the load and will",
-      "D": "The VALIDATION_MODE option will validate data to be loaded by the COPY statement without completing the load and will"
+      "C": "The VALIDATION_MODE option will validate data to be loaded by the COPY statement while completing the load and will return the rows that could not be loaded without error",
+      "D": "The VALIDATION_MODE option will validate data to be loaded by the COPY statement without completing the load and will return possible errors"
     },
     "ans": "BD",
     "domain": "Data Loading and Unloading"
@@ -1669,7 +1669,7 @@ const practiceQuestions = [
       "C": "Both of the above",
       "D": "None of the above"
     },
-    "ans": "C",
+    "ans": "B",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
   },
   {
@@ -11557,7 +11557,7 @@ const practiceQuestions = [
       "D": "After loading data into an external stage.",
       "E": "Only when using an encrypted stage."
     },
-    "ans": "BC",
+    "ans": "AC",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -11908,7 +11908,12 @@ const practiceQuestions = [
   {
     "id": 927,
     "q": "Which sequence (order) of object privileges should be used to grant a custom role read-only access on a table?",
-    "options": {},
+    "options": {
+      "A": "USAGE ON SCHEMA, USAGE ON DATABASE THEN USAGE ON TABLE",
+      "B": "USAGE ON SCHEMA, USAGE ON DATABASE THEN SELECT ON TABLE",
+      "C": "USAGE ON DATABASE, USAGE ON SCHEMA THEN SELECT ON TABLE",
+      "D": "USAGE ON DATABASE, USAGE ON SCHEMA THEN OPERATE ON TABLE"
+    },
     "ans": "C",
     "domain": "Account Access and Security"
   },
@@ -12505,7 +12510,7 @@ const practiceQuestions = [
       "D": "-a",
       "E": "-c"
     },
-    "ans": "AD",
+    "ans": "DE",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
   },
   {
@@ -12918,7 +12923,7 @@ const practiceQuestions = [
       "D": "MONETIZED_USAGE_DAILY",
       "E": "LISTING_TELEMETRY_DAILY"
     },
-    "ans": "D",
+    "ans": "BE",
     "domain": "Data Protection and Data Sharing"
   },
   {
