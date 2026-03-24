@@ -1819,7 +1819,7 @@ const practiceQuestions = [
   },
   {
     "id": 103,
-    "q": "When scaling up Virtual Warehouses by increasing Virtual Warehouse t-shirt size, you are primarily scaling for improved:",
+    "q": "When scaling up Virtual Warehouses by increasing Virtual Warehouse size, you are primarily scaling for improved:",
     "options": {
       "A": "Concurrency",
       "B": "Performance"
@@ -1898,7 +1898,7 @@ const practiceQuestions = [
       "A": "True",
       "B": "False"
     },
-    "ans": "A",
+    "ans": "B",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
   },
   {
@@ -12992,7 +12992,7 @@ const practiceQuestions = [
     "options": {
       "A": "A stage with a directory table set to automatically refresh will be created.",
       "B": "A stage with a directory table that has metadata that must be manually refreshed will be created.",
-      "C": "An error will be received stating that the storage location for the stage must be identified when creating a stage with a",
+      "C": "An error will be received stating that the storage location for the stage must be identified when creating a stage with a directory table.",
       "D": "The command will fail to run because the name of the directory table is not specified."
     },
     "ans": "B",
@@ -13396,8 +13396,8 @@ const practiceQuestions = [
     "options": {
       "A": "Send an alert notification to all account users who have notifications enabled.",
       "B": "Send an alert notification to all virtual warehouse users when thresholds over 100% have been met.",
-      "C": "Send a notification to all account administrators who have notifications enabled, and suspend all assigned warehouses after",
-      "D": "Send a notification to all account administrators who have notifications enabled, and suspend all assigned warehouses"
+      "C": "Send a notification to all account administrators who have notifications enabled, and suspend all assigned warehouses after all statements being executed by the warehouses have completed.",
+      "D": "Send a notification to all account administrators who have notifications enabled, and suspend all assigned warehouses immediately, canceling any statements being executed by the warehouses."
     },
     "ans": "C",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
@@ -13991,7 +13991,7 @@ const practiceQuestions = [
   },
   {
     "id": 1098,
-    "q": "A column named “Data” contains VARIANT data and stores values as follows: How will Snowflake extract the employee’s name from the column data?",
+    "q": "A column named “Data” contains VARIANT data and stores values as follows: How will Snowflake extract the employee’s name from the column data? {\"Employee\": {id : 100,name : John,location : \"New York\"}}",
     "options": {
       "A": "Data:employee.name",
       "B": "DATA:employee.name",
@@ -14460,7 +14460,7 @@ const practiceQuestions = [
       "C": "A VARIANT column can be used to create a data hierarchy and a string column cannot.",
       "D": "A VARIANT column will have a better query performance than a string column."
     },
-    "ans": "C",
+    "ans": "D",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -14743,7 +14743,7 @@ const practiceQuestions = [
       "C": "OBJECT_CONSTRUCT",
       "D": "TO_JSON"
     },
-    "ans": "D",
+    "ans": "C",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -14987,7 +14987,7 @@ const practiceQuestions = [
       "D": "STATEMENT_QUEUED_TIMEOUT_IN_SECONDS",
       "E": "QUERY_ACCELERATION_MAX_SCALE_FACTOR"
     },
-    "ans": "BE",
+    "ans": "CD",
     "domain": "Performance and Cost Optimization Concepts"
   },
   {
@@ -15068,9 +15068,9 @@ const practiceQuestions = [
     "id": 1186,
     "q": "How does Snowflake optimize queries on tables by leveraging the sorting and storage of data within micro-partitions?",
     "options": {
-      "A": "The data is pruned by column to eliminate unnecessary micro-partitions, then the rows within the remaining micro-",
+      "A": "The data is pruned by column to eliminate unnecessary micro-partitions, then the rows within the remaining micropartitionsare filtered.",
       "B": "The data is pruned by micro-partitions based on column values, then rows within the remaining micro-partitions are filtered.",
-      "C": "Any micro-partitions that are not needed for the query are pruned, then the data within the remaining micro-partitions is",
+      "C": "Any micro-partitions that are not needed for the query are pruned, then the data within the remaining micro-partitions is pruned by column",
       "D": "The data within micro-partitions is sorted by rows, then the columns are filtered based on the query conditions."
     },
     "ans": "B",
@@ -15774,7 +15774,7 @@ const practiceQuestions = [
       "D": "All privileges on the T1 database",
       "E": "CREATE TABLE privilege on the T1 database"
     },
-    "ans": "B",
+    "ans": "BE",
     "domain": "Account Access and Security"
   },
   {
@@ -15930,7 +15930,7 @@ const practiceQuestions = [
       "A": "The result set will be successfully downloaded from Snowsight.",
       "B": "The result set will be automatically compressed and the data will be downloaded as individual files.",
       "C": "The download will fail because the result set needs to be broken up into files no greater than 50 MB before downloading.",
-      "D": "The download will result in an error because the filters of the SELECT query need to be changed so that Snowsight returns a"
+      "D": "The download will result in an error because the filters of the SELECT query need to be changed so that Snowsight returns a smaller result set."
     },
     "ans": "B",
     "domain": "Account Access and Security"
@@ -16078,7 +16078,7 @@ const practiceQuestions = [
       "D": "Create streams on objects in the database.",
       "E": "Query data from the objects in the database."
     },
-    "ans": "D",
+    "ans": "DE",
     "domain": "Data Protection and Data Sharing"
   },
   {
@@ -16114,7 +16114,7 @@ const practiceQuestions = [
       "C": "Use the CREATE SHARE command.",
       "D": "Use the GRANT command to share selected objects."
     },
-    "ans": "B",
+    "ans": "A",
     "domain": "Data Protection and Data Sharing"
   },
   {
@@ -16360,7 +16360,7 @@ const practiceQuestions = [
       "D": "Truncate the target table and reload the files.",
       "E": "Use the ALTER TABLE...REFRESH command"
     },
-    "ans": "AC",
+    "ans": "BC",
     "domain": "Data Loading and Unloading"
   },
   {
@@ -16408,7 +16408,7 @@ const practiceQuestions = [
       "C": "A user with a role that has been granted the CREATE NETWORK POLICY privilege",
       "D": "A user with a role that has been granted the OWNERSHIP privilege on both the user and the network policy"
     },
-    "ans": "D",
+    "ans": "A",
     "domain": "Account Access and Security"
   },
   {
@@ -16504,7 +16504,7 @@ const practiceQuestions = [
       "C": "Cast the data to a VARIANT data type within the INSERT statement.",
       "D": "Use a subquery to convert the data to a VARIANT data type and then insert it."
     },
-    "ans": "A",
+    "ans": "B",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
   },
   {
@@ -16614,7 +16614,7 @@ const practiceQuestions = [
       "D": "The range of values for each of the columns in the full table",
       "E": "The minimum and maximum values for each of the columns"
     },
-    "ans": "A",
+    "ans": "AD",
     "domain": "Snowflake AI Data Cloud Features & Architecture"
   },
   {
