@@ -17636,7 +17636,7 @@ function updateUI() {
   // Estimated score and pass/fail
   let estScore = totalWeight > 0 ? Math.round((weightedScore / totalWeight) * 100) : 0;
   let passMsg = estScore >= 75 ? `<span style='color:#28a745;font-weight:bold;'>PASS</span>` : `<span style='color:#dc3545;font-weight:bold;'>NOT PASSING</span>`;
-  let estHtml = `<div id='est-score-section' style='margin-top:22px;padding:14px 12px 10px 12px;background:#f8fafc;border-radius:10px;color:#222;box-shadow:0 1px 4px rgba(0,0,0,0.04);font-size:1.08em;'>Estimated Exam Score: <b>${estScore}%</b><br>Status: ${passMsg}<br><span style='font-size:0.97em;color:#555;'>(75% required to pass, domain weights applied)</span></div>`;
+  let estHtml = `<div id='est-score-section' style='margin-top:22px;padding:14px 12px 10px 12px;background:#f8fafc;border-radius:10px;color:#222;box-shadow:0 1px 4px rgba(0,0,0,0.04);font-size:1.08em;'>Estimated Exam Score: <b>${scorePercent}%</b><br>Status: ${passMsg}<br><span style='font-size:0.97em;color:#555;'>(75% required to pass, domain weights applied)</span></div>`;
   // Remove any previous estimate section
   const prevEst = document.getElementById('est-score-section');
   if (prevEst) prevEst.remove();
